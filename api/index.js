@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = 3000;
-const root = path.join(__dirname, "public/dist/container");
+const root = path.join(__dirname, "../public/dist/container");
 
 // Serve static files from the dist folder
 app.use(express.static(root));
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/marketing/:filename", (req, res) => {
   const filename = req.params.filename;
-  res.sendFile(path.join(__dirname, "public/dist/marketing", filename));
+  res.sendFile(path.join(__dirname, "../public/dist/marketing", filename));
 });
 
 app.get("/pricing", (req, res) => {
