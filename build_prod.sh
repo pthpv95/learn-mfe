@@ -1,4 +1,5 @@
 #!/bin/bash
+npm install
 
 # Navigate to the container package and run the build command in the background
 (cd packages/container && npm install && npm run build) &
